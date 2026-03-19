@@ -448,6 +448,77 @@ body.light .nav-status {
 .btn-primary:hover::before { transform: translateX(0); }
 .btn-primary:hover { box-shadow: 0 0 30px rgba(0,212,255,0.5); transform: translateY(-2px); }
 
+/* NAV RESUME BUTTON */
+.nav-resume-btn {
+  padding: 0.35rem 0.9rem !important;
+  border: 1px solid var(--border-hover) !important;
+  border-radius: 6px;
+  color: var(--cyan) !important;
+  background: rgba(0,212,255,0.05);
+}
+
+.nav-resume-btn::after { display: none !important; }
+
+.nav-resume-btn:hover {
+  background: rgba(0,212,255,0.12) !important;
+  border-color: var(--cyan) !important;
+  box-shadow: 0 0 12px rgba(0,212,255,0.2);
+  color: var(--cyan) !important;
+}
+
+body.light .nav-resume-btn {
+  border-color: rgba(0,100,180,0.35) !important;
+  color: var(--cyan) !important;
+  background: rgba(0,100,180,0.06);
+}
+
+/* HERO RESUME BUTTON */
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.85rem 1.75rem;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  background: rgba(0,212,255,0.06);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-resume svg { width: 16px; height: 16px; }
+
+.btn-resume::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,212,255,0.08);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.btn-resume:hover::before { transform: translateX(0); }
+.btn-resume:hover {
+  background: rgba(0,212,255,0.12);
+  box-shadow: 0 0 25px rgba(0,212,255,0.3);
+  transform: translateY(-2px);
+}
+
+body.light .btn-resume {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(0,100,180,0.06);
+}
+
+body.light .btn-resume:hover {
+  background: rgba(0,100,180,0.12);
+  box-shadow: 0 0 20px rgba(0,100,180,0.2);
+}
+
 .btn-ghost {
   padding: 0.85rem 2rem;
   border: 1px solid var(--border-hover);
